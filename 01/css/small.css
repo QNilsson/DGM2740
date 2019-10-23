@@ -1,0 +1,82 @@
+* { -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box; box-sizing: 
+border-box;}
+
+/*media query*/
+
+/* body rules here*/
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/* header rules here */
+header{
+    max-width: 75rem;
+    background-color: orange;
+    padding: 1rem 2%; /*padding is inside the box*/
+}
+
+/* h1 is child of header*/
+header h1{ margin: 0; padding: 1rem 2%;}
+
+
+/*nav rules here*/
+nav{ 
+    max-width: 75rem;
+    background-color: yellow;
+    margin:0;
+    padding: 0; 
+    
+}
+
+nav ul{ margin: 0; padding: 0;}
+
+nav li{ 
+    list-style-type: none;
+    float:left; 
+    width:50%;
+    padding:.8rem;
+}
+
+nav a{
+    display:block;
+    color:red;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li:hover{background-color: #444;}
+
+nav li.active{background-color:darkblue;}
+
+.clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/*rules for main content*/
+main{
+    max-width: 75rem;  
+}
+.image2{
+    display: none;
+}
+
+.image3{
+    display: none;
+}
+
+main figure img{ 
+    width:100%;
+}
+main h1{padding:0; margin: 1rem 2%;}
+
+/*rules for footer*/
+footer{
+    text-align: center;
+    background-color: orange;
+    max-width: 75rem;
+    
+}

@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1028px){
+
+    nav ul{padding-left: 2%;}
+    nav li {float: left; width:25%; padding:0; height: 50px; margin: auto;}
+    nav a{ padding: .5rem 1rem;}
+    
+
+    .image2{
+        display: none;
+    }
+
+    .image3{
+        display: block;
+    }
+} 

@@ -1,0 +1,12 @@
+@media only screen and (min-width: 560px){
+
+    nav li {float: left; width:25%;}
+    .image1{
+        display:none;
+    }
+
+    .image2{
+        display: block;
+    }
+    
+} 

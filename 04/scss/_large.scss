@@ -1,0 +1,42 @@
+// header, nav, main, footer {
+//         max-width: 64rem;
+//         margin:auto;
+// }
+nav {
+    max-width: 56.25rem;
+    margin: 0 auto;
+    
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+#slogan{
+    display: inline;
+}
+
+div#headerWrapper {
+  background-image: url("../images/redRock.jpg");
+  width: 100%;
+
+}
+
+
+/*----------- NAVIGATION --------------*/
+
+
+
+/*----------- MAIN --------------*/
+
+.newspaper{
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-count: 3;
+  display: block;
+}
+
+/*----------- FOOTER --------------*/
+    
+footer{margin-top: 4rem;}

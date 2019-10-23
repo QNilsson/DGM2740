@@ -1,0 +1,132 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: $fontFamily;
+  max-width: $widest;
+  margin: auto;
+}
+
+/*----------- HEADER --------------*/
+div#headerWrapper {
+  max-width: $widest;
+  background-image: url("../images/redRockphone.jpg")
+}
+
+#slogan {
+  display: none;
+  color:white;
+  margin: 0;
+  font-weight: normal;
+  font-family: $fontFamily;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+picture{
+  padding:0;
+}
+
+header h1 {
+  font-family: $headFont;
+  margin: 0;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  color:white;
+}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+  background: $primaryColor;
+  max-width: $widest;
+ 
+}
+
+nav {
+  background-color: $primaryColor;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+}
+
+nav ul li a {
+  display: block;
+  background-color: lighten($primaryColor, 10%);
+  color: #eee;
+  border-left: 1px solid $secondaryColor;
+  border-bottom: 1px solid $secondaryColor;
+  padding: .8rem .3rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: lighten($primaryColor, 50%);
+}
+
+nav ul li.active a {
+  background-color: darken($primaryColor, 10%);
+  color: #fff;
+}
+
+/*----------- MAIN --------------*/
+div#mainwrapper {
+  max-width: $widest;
+}
+
+main {
+  padding: .3rem;
+  min-height: 10rem;
+
+  h1 {
+    color: $primaryColor;
+  }
+}
+
+.newspaper{
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-count: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: $secondaryColor;
+  padding: 0.5rem 2%;
+  text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

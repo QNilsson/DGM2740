@@ -1,0 +1,139 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: $fontFamily;
+  max-width: $widest;
+  margin: auto;
+}
+
+/*----------- HEADER --------------*/
+div#headerWapper {
+  max-width: $widest;
+  background-color: lighten($primaryColor, 30%);
+}
+
+#slogan {
+  display: none;
+}
+
+header {
+  padding: 0.5rem 2%;
+  background-color: $primaryColor;
+}
+
+#name {
+  margin: 0;
+  padding-top: 50px;
+  font-family: $titleFont;
+  color: $secondaryColor;
+  font-size: 44px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: $fontFamily;
+  color: darken($secondaryColor, 45%);
+}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+  background: lighten($primaryColor, 45%);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+  width: 50%;
+}
+
+nav ul li a {
+  display: block;
+  background-color: lighten($primaryColor, 10%);
+  color: #eee;
+  border-left: 1px solid #777;
+  border-bottom: 1px solid #777;
+  //padding: .8rem .3rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+nav ul li.active a {
+  background-color: darken($primaryColor, 10%);
+  color: #fff;
+}
+
+/*----------- MAIN --------------*/
+div#mainwrapper {
+  max-width: $widest;
+}
+
+main {
+  padding: 0.5rem;
+  //min-height: 10rem;
+}
+
+.member {
+  clip-path: circle(40%);
+  shape-outside: circle(40%);
+  float: left;
+}
+div.newspaper {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+article {
+  margin: 0;
+}
+article.gallery figure {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+article.gallery figure img {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+/*----------- FOOTER --------------*/
+footer {
+  background-color: lighten($primaryColor, 24%);
+  padding: 0.5rem 2%;
+  text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
