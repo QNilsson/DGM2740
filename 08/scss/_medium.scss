@@ -29,9 +29,11 @@
 
 /*----------- MAIN --------------*/
 main {
-  padding: 0.3rem;
+  padding: 10px 5px 5px 0;
+  margin: 10px;
   min-height: 10rem;
   max-width: $widest;
+  font-family: Arial, Helvetica, sans-serif;
 
   figure {
     max-width: 400px;
@@ -76,18 +78,27 @@ main {
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row: 1 / span 2;
+      border: 2px solid red;
+    }
+    span:nth-child(2){
+      border: 2px solid purple;
+      grid-column: 1 / span 3;
+      grid-row:3;
     }
     figure:nth-child(2) {
       grid-column-start: 1 / span 1;
-      grid-row: 3;
+      grid-row: 4;
+      border: 2px solid green;
     }
     figure:nth-child(3) {
-      grid-row: 3;
+      grid-row: 4;
       grid-column-start: 2 span / 1;
+      border: 2px solid yellow;
     }
     figure:nth-child(4) {
-      grid-row: 3;
+      grid-row: 4;
       grid-column-start: 3 span / 1;
+      border: 2px solid blue;
     }
   } //end parent
 }
