@@ -116,13 +116,15 @@ article {
 }
 article.gallery figure {
   width: 100%;
-  padding: 0;
+  height: 0;
+  padding-bottom: 66%;
   margin: 0;
 }
 article.gallery figure img {
   width: 100%;
-  margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+  position: absolute;
+  
 }
 /*----------- FOOTER --------------*/
 footer {

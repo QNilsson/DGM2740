@@ -735,7 +735,7 @@ footer {
   display: table;
   clear: both; }
 
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 48rem) {
   .Mmedium-1 {
     flex-basis: 6.3333333333%; }
 
@@ -864,7 +864,7 @@ footer {
   .tip-faq {
     justify-content: space-between; } }
 /* end of media query */
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 75rem) {
   .Mlarge-1 {
     flex-basis: 6.3333333333%; }
 

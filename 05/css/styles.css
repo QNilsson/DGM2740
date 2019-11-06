@@ -314,6 +314,13 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+#page-container {
+  position: relative;
+  min-width: 100vh; }
+
+#content-wrap {
+  padding-bottom: 2.5rem; }
+
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
@@ -324,15 +331,18 @@ body {
 /*----------- HEADER --------------*/
 div#headerWapper {
   max-width: 75rem; }
-  div#headerWapper header img {
-    max-width: 100%;
-    max-height: 100%; }
 
 header {
   padding: 0.5rem 2%;
-  background-color: #fffaef; }
-  header #logo {
-    float: left; }
+  background-color: #fffaef;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0 0 0; }
+  header img {
+    width: 70px;
+    height: 100%;
+    margin: 0 5px 0 5px; }
 
 header h1 {
   margin: 0;
@@ -417,7 +427,12 @@ footer {
   background-color: #800000;
   padding: 0.5rem 2%;
   text-align: center;
-  color: #fffaef; }
+  color: #fffaef;
+  position: absolute;
+  bottom: 0;
+  clear: both;
+  width: 100%;
+  margin-top: 30px; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {

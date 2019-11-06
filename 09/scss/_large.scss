@@ -1,0 +1,25 @@
+/*-----MAIN-------*/
+html{
+    margin:10px;
+}
+
+nav {
+    width: 75rem;
+    a:hover{
+        color: lighten($secondaryColor, 40%);
+    }
+}
+main{
+    max-width: $widest;
+}
+.grid{
+    display:grid;
+    grid-column-gap: 10px;
+    grid-template-columns:25% 25% 25% auto;
+}
+
+.card{
+    text-align: center;
+    background-color:orange;
+}
+
