@@ -498,6 +498,10 @@ button:hover {
 button:focus {
   outline: none; }
 
+figcaption {
+  font-size: 30pt;
+  text-align: center; }
+
 /*----------- FOOTER --------------*/
 footer {
   background-color: #501b1d;
