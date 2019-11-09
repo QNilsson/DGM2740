@@ -306,8 +306,7 @@ template {
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  margin: 10px; }
+  -ms-text-size-adjust: 100%; }
 
 /*----------- apply a natural box layout model to all elements --------------*/
 * {
@@ -315,43 +314,43 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-div#container {
-  min-height: 100vh;
-  /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px;
-  /* height of your footer */
-  margin: auto;
-  max-width: 1024px;
-  /*----------- BODY --------------*/
-  /*----------- HEADER --------------*/ }
-  div#container #content-wrap {
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 64rem;
+  margin: auto; }
+  body #page-container {
+    position: relative;
+    min-height: 100vh; }
+  body #content-wrap {
     padding-bottom: 2.5rem; }
-  div#container body {
-    font-size: 16px;
-    font-family: Verdana, sans-serif; }
-  div#container header {
-    background-image: linear-gradient(to bottom, transparent, #837960), url("/09/images/bostonskyline.jpg");
-    max-width: 100%;
-    height: 100px;
-    color: white; }
 
-h1 {
-  margin: 0;
-  font-family: "Sigmar One", cursive; }
+/*----------- HEADER --------------*/
+div#headerWrapper {
+  max-width: 64rem;
+  background: #2e1114; }
 
-header h2 {
+picture {
+  padding: 0; }
+
+header h1 {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 36pt;
   margin: 0;
-  font-family: "Lato", sans-serif; }
+  padding-left: 3%;
+  color: #adadad; }
 
 /*----------- NAVIGATION --------------*/
 nav {
   width: 100%;
-  display: flex; }
+  display: flex;
+  position: relative; }
 
 .nav-md-lg {
+  display: none; }
+
+#sub-nav {
   display: none; }
 
 .nav-sm {
@@ -359,31 +358,34 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  background: #000033; }
+  justify-content: flex-start; }
   .nav-sm div {
-    width: 95%;
-    height: 50px;
+    width: 100%;
+    height: 40px;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: flex-start;
+    align-items: center;
+    background: #2e1114;
+    background: linear-gradient(0deg, #2e1114 20%, #501b1d 100%); }
+    .nav-sm div:hover {
+      background-color: #9e3a45; }
     .nav-sm div #menu {
       border: none;
       background: none;
-      font-size: 15pt;
+      font-size: 16pt;
       font-weight: bold;
       color: white;
-      cursor: pointer; }
+      margin-left: 10px; }
     .nav-sm div #x {
       display: none;
       border: none;
       background: none;
-      font-size: 20pt;
+      font-size: 16pt;
       font-weight: bold;
-      font-family: "Lato", sans-serif;
+      font-family: "Montserrat", sans-serif;
       color: white;
-      transition: ease-in-out 0.2s;
-      cursor: pointer; }
+      margin-left: 10px;
+      transition: ease-in-out 0.2s; }
   .nav-sm #dd-menu {
     width: 100%;
     display: none;
@@ -393,109 +395,115 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    border-top: solid 1px white; }
-    .nav-sm #dd-menu li {
+    border-top: solid 1px white;
+    transition: ease-in-out 0.2s;
+    background: #2e1114; }
+    .nav-sm #dd-menu .dd-item {
       width: 100%;
       height: 50px;
       border-bottom: solid 1px white;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center; }
-      .nav-sm #dd-menu li a {
+      .nav-sm #dd-menu .dd-item:hover {
+        background-color: #9e3a45; }
+      .nav-sm #dd-menu .dd-item a {
         width: 100%;
         height: 100%;
         text-decoration: none;
         color: white;
-        font-family: "Lato", sans-serif;
+        font-family: "Montserrat", sans-serif;
         display: flex;
-        justify-content: center;
-        align-items: center; }
-      .nav-sm #dd-menu li a:hover {
-        background-color: #000075; }
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px; }
+  .nav-sm #dd-sub-menu {
+    width: 100%;
+    height: 120px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .nav-sm #dd-sub-menu a {
+      width: 100%;
+      height: 40px;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      background: #2e1114;
+      border-bottom: solid 1px white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 40px; }
+      .nav-sm #dd-sub-menu a:hover {
+        background-color: #9e3a45; }
 
-.active {
-  background: #000075;
-  padding: 5px; }
+#active {
+  background: #090304; }
 
 /*----------- MAIN --------------*/
+div#mainwrapper {
+  max-width: 64rem; }
+
 main {
-  max-width: 1024px; }
-  main picture {
-    width: 100%;
-    position: relative;
-    border: 1px solid black; }
-    main picture img {
-      width: 100%;
-      height: 100%; }
-    main picture div {
-      font-family: "Lato", sans-serif;
-      position: absolute;
-      bottom: 0;
-      background: black;
-      /* Fallback color */
-      background: rgba(0, 0, 0, 0.5);
-      /* Black background with 0.5 opacity */
-      color: #f1f1f1;
-      width: 100%;
-      padding: 20px; }
+  padding: .3rem;
+  min-height: 10rem; }
+  main .form-section {
+    padding-bottom: 25px;
+    width: 100%; }
+    main .form-section fieldset {
+      border-radius: 10px;
+      opacity: 5;
+      color: #2e1114; }
+      main .form-section fieldset legend {
+        font-size: 16pt; }
+      main .form-section fieldset form {
+        padding-top: 5px;
+        padding-bottom: 5px; }
+        main .form-section fieldset form label {
+          margin-bottom: 20px; }
+        main .form-section fieldset form input[type=text],
+        main .form-section fieldset form [type=date],
+        main .form-section fieldset form [type=url],
+        main .form-section fieldset form [type=number],
+        main .form-section fieldset form select {
+          margin-bottom: 20px;
+          width: 100%; }
+        main .form-section fieldset form input[type=text],
+        main .form-section fieldset form [type=date],
+        main .form-section fieldset form [type=url],
+        main .form-section fieldset form [type=number],
+        main .form-section fieldset form select {
+          background-color: lightgray;
+          font-size: 16pt;
+          font-family: Arial, Helvetica, sans-serif;
+          border-radius: 6px;
+          border: 1px solid #2e1114; }
 
-.card-grid {
-  width: 95vw;
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: 100%;
-  margin-top: 30px; }
-
-.card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+button {
+  background-color: #2e1114;
+  color: white;
+  border-radius: 10px;
+  font-size: 20pt;
+  padding: 10px;
+  cursor: pointer;
+  width: 50%;
   transition: transform .2s; }
-  .card img {
-    width: 100%;
-    height: 100%; }
-  .card:hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
 
-.solid-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #F56c00;
-  transition: ease-in 0.3s;
-  cursor: pointer; }
-  .solid-card:hover {
-    opacity: 0; }
-  .solid-card h4 {
-    color: white;
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    padding-top: 10px; }
-  .solid-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px; }
+button:hover {
+  transform: scale(0.9); }
 
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #000033;
+  background-color: #501b1d;
   padding: 0.5rem 2%;
   text-align: center;
   color: white;
-  position: absolute;
   bottom: 0;
+  height: 2.5rem;
   width: 100%;
-  font-family: "Lato", sans-serif; }
+  position: absolute; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -503,14 +511,21 @@ footer {
   display: table;
   clear: both; }
 
-/*------media query-----*/
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
-  html {
-    margin: 10px; }
-
   /*----------- HEADER --------------*/
+  #slogan {
+    display: inline; }
+
+  div#headerWrapper {
+    max-width: 64rem;
+    background-image: url("../images/redRock1.jpg"); }
+
   /*----------- NAVIGATION --------------*/
+  nav {
+    display: flex;
+    flex-direction: column; }
+
   .nav-md-lg {
     width: 100%;
     height: 40px;
@@ -518,49 +533,81 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    background: #000033; }
+    background: #2e1114;
+    background: linear-gradient(0deg, #2e1114 20%, #501b1d 100%); }
     .nav-md-lg a {
-      width: 10%;
+      width: 13%;
       height: 100%;
       text-decoration: none;
       color: white;
-      font-family: "Lato", sans-serif;
+      font-family: "Montserrat", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-right: 1px solid white; }
-    .nav-md-lg a:hover {
-      color: blue; }
+      transition: 0.2s ease-in-out; }
+      .nav-md-lg a:hover {
+        background-color: #9e3a45; }
 
   .nav-sm {
     display: none; }
 
+  .active {
+    background: linear-gradient(0deg, #531f24 20%, #76282b 100%); }
+
+  #sub-nav {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 40px; }
+    #sub-nav:hover {
+      background-color: #9e3a45; }
+    #sub-nav div {
+      width: 13%; }
+
+  #sub-menu {
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    background: #2e1114; }
+    #sub-menu:hover {
+      background-color: #9e3a45; }
+    #sub-menu a {
+      width: 100%;
+      border-bottom: solid 1px white;
+      color: white;
+      text-decoration: none;
+      padding: 7px 0px 7px 0px;
+      font-family: "Montserrat", sans-serif;
+      transition: ease-in-out 0.2s; }
+      #sub-menu a:hover {
+        background: #9e3a45; }
+
   /*----------- MAIN --------------*/
-  main {
-    max-width: 1024px; }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr); }
-
-  .solid-card img {
-    width: 0px; }
+  .form-section {
+    padding-bottom: 25px;
+    width: 50%; }
 
   /*----------- FOOTER --------------*/
-  /* end of media query */ }
-/*--------media query------*/
+  footer {
+    margin-top: 4rem; } }
+/* end of media query */
 @media only screen and (min-width: 64rem) {
-  /*-----MAIN-------*/
-  html {
-    margin: 10px; }
-
   nav {
-    width: 75rem; }
-    nav a:hover {
-      color: blue; }
+    max-width: 56.25rem;
+    margin: 0 auto; }
 
-  main {
-    max-width: 1024px; }
+  /*----------- BODY --------------*/
+  .form-section {
+    padding-bottom: 25px;
+    width: 25%; }
 
-  .card-grid {
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr); } }
+  /*----------- HEADER --------------*/
+  /*  ----------------------- NAVIGATION --------------------------- */
+  nav {
+    width: 64rem; }
+
+  /*----------- MAIN --------------*/
+  /*----------- FOOTER --------------*/ }
+/* end of media query */

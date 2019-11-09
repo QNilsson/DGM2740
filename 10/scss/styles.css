@@ -306,8 +306,7 @@ template {
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  margin: 10px; }
+  -ms-text-size-adjust: 100%; }
 
 /*----------- apply a natural box layout model to all elements --------------*/
 * {
@@ -315,187 +314,98 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-div#container {
-  min-height: 100vh;
-  /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px;
-  /* height of your footer */
-  margin: auto;
-  max-width: 1024px;
-  /*----------- BODY --------------*/
-  /*----------- HEADER --------------*/ }
-  div#container #content-wrap {
-    padding-bottom: 2.5rem; }
-  div#container body {
-    font-size: 16px;
-    font-family: Verdana, sans-serif; }
-  div#container header {
-    background-image: linear-gradient(to bottom, transparent, #837960), url("/09/images/bostonskyline.jpg");
-    max-width: 100%;
-    height: 100px;
-    color: white; }
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+  margin: auto; }
 
-h1 {
-  margin: 0;
-  font-family: "Sigmar One", cursive; }
+/*----------- HEADER --------------*/
+div#headerWrapper {
+  max-width: 60rem;
+  background-image: url("../images/redRockphone.jpg"); }
 
-header h2 {
+#slogan {
+  display: none;
+  color: white;
   margin: 0;
-  font-family: "Lato", sans-serif; }
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 3%;
+  padding-left: 3%; }
+
+picture {
+  padding: 0; }
+
+header h1 {
+  font-family: "Major Mono Display", monospace;
+  margin: 0;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  color: white; }
 
 /*----------- NAVIGATION --------------*/
+div#navWrapper {
+  background: #7d3f33;
+  max-width: 60rem; }
+
 nav {
-  width: 100%;
-  display: flex; }
+  background-color: #7d3f33; }
 
-.nav-md-lg {
-  display: none; }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
 
-.nav-sm {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background: #000033; }
-  .nav-sm div {
-    width: 95%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .nav-sm div #menu {
-      border: none;
-      background: none;
-      font-size: 15pt;
-      font-weight: bold;
-      color: white;
-      cursor: pointer; }
-    .nav-sm div #x {
-      display: none;
-      border: none;
-      background: none;
-      font-size: 20pt;
-      font-weight: bold;
-      font-family: "Lato", sans-serif;
-      color: white;
-      transition: ease-in-out 0.2s;
-      cursor: pointer; }
-  .nav-sm #dd-menu {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: solid 1px white; }
-    .nav-sm #dd-menu li {
-      width: 100%;
-      height: 50px;
-      border-bottom: solid 1px white;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .nav-sm #dd-menu li a {
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: white;
-        font-family: "Lato", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-      .nav-sm #dd-menu li a:hover {
-        background-color: #000075; }
+nav ul li {
+  float: left;
+  width: 25%; }
 
-.active {
-  background: #000075;
-  padding: 5px; }
+nav ul li a {
+  display: block;
+  background-color: #a15142;
+  color: #eee;
+  border-left: 1px solid #5e7784;
+  border-bottom: 1px solid #5e7784;
+  padding: .8rem .3rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-align: center; }
+
+nav ul li:first-child a {
+  border-left: none; }
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #e8ccc7; }
+
+nav ul li.active a {
+  background-color: #592d24;
+  color: #fff; }
 
 /*----------- MAIN --------------*/
+div#mainwrapper {
+  max-width: 60rem; }
+
 main {
-  max-width: 1024px; }
-  main picture {
-    width: 100%;
-    position: relative;
-    border: 1px solid black; }
-    main picture img {
-      width: 100%;
-      height: 100%; }
-    main picture div {
-      font-family: "Lato", sans-serif;
-      position: absolute;
-      bottom: 0;
-      background: black;
-      /* Fallback color */
-      background: rgba(0, 0, 0, 0.5);
-      /* Black background with 0.5 opacity */
-      color: #f1f1f1;
-      width: 100%;
-      padding: 20px; }
+  padding: .3rem;
+  min-height: 10rem; }
+  main h1 {
+    color: #7d3f33; }
 
-.card-grid {
-  width: 95vw;
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: 100%;
-  margin-top: 30px; }
-
-.card {
-  width: 100%;
+.newspaper {
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-count: 3;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  transition: transform .2s; }
-  .card img {
-    width: 100%;
-    height: 100%; }
-  .card:hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-
-.solid-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #F56c00;
-  transition: ease-in 0.3s;
-  cursor: pointer; }
-  .solid-card:hover {
-    opacity: 0; }
-  .solid-card h4 {
-    color: white;
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    padding-top: 10px; }
-  .solid-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px; }
+  flex-wrap: wrap; }
 
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #000033;
+  background-color: #5e7784;
   padding: 0.5rem 2%;
-  text-align: center;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-family: "Lato", sans-serif; }
+  text-align: center; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -503,64 +413,68 @@ footer {
   display: table;
   clear: both; }
 
-/*------media query-----*/
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
-  html {
-    margin: 10px; }
-
   /*----------- HEADER --------------*/
-  /*----------- NAVIGATION --------------*/
-  .nav-md-lg {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    background: #000033; }
-    .nav-md-lg a {
-      width: 10%;
-      height: 100%;
-      text-decoration: none;
-      color: white;
-      font-family: "Lato", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-right: 1px solid white; }
-    .nav-md-lg a:hover {
-      color: blue; }
+  #slogan {
+    display: inline; }
 
-  .nav-sm {
-    display: none; }
+  div#headerWrapper {
+    max-width: 60rem;
+    background-image: url("../images/redRock1.jpg"); }
+
+  /*----------- NAVIGATION --------------*/
+  nav ul {
+    margin-left: 2%; }
+
+  nav ul li {
+    width: auto; }
+
+  nav ul li:first-child a {
+    border-left: 1px solid #777; }
+
+  nav ul li:last-child a {
+    border-right: 1px solid #777; }
+
+  nav ul li a {
+    padding: .5rem 1rem; }
 
   /*----------- MAIN --------------*/
-  main {
-    max-width: 1024px; }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr); }
-
-  .solid-card img {
-    width: 0px; }
+  .newspaper {
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-count: 3;
+    display: block; }
 
   /*----------- FOOTER --------------*/
-  /* end of media query */ }
-/*--------media query------*/
+  footer {
+    margin-top: 4rem; } }
+/* end of media query */
 @media only screen and (min-width: 64rem) {
-  /*-----MAIN-------*/
-  html {
-    margin: 10px; }
-
   nav {
-    width: 75rem; }
-    nav a:hover {
-      color: blue; }
+    max-width: 56.25rem;
+    margin: 0 auto; }
 
-  main {
-    max-width: 1024px; }
+  /*----------- BODY --------------*/
+  /*----------- HEADER --------------*/
+  #slogan {
+    display: inline; }
 
-  .card-grid {
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr); } }
+  div#headerWrapper {
+    background-image: url("../images/redRock.jpg");
+    width: 100%; }
+
+  /*----------- NAVIGATION --------------*/
+  /*----------- MAIN --------------*/
+  .newspaper {
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-count: 3;
+    display: block; }
+
+  /*----------- FOOTER --------------*/
+  footer {
+    margin-top: 4rem; } }
+/* end of media query */
+
+/*# sourceMappingURL=styles.css.map */

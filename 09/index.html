@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="description" content="Fill Me In" />
     <meta name="author" content="John Doe" />
-    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/5baca2d7f5.js"></script>
     <!-- This start file was build by Paul Cheney  -->
     <title>09 Boston City by Quinn Nilsson</title>
 
     <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
     <!-- STYLE SHEETS -->
     <link href="css/styles.css" rel="stylesheet" />
@@ -20,157 +28,185 @@
     <link href="slick/slick-theme.css" rel="stylesheet" />
     <link href="css/fontawesome-all.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <div id="content-wrap">
-            <!-- HEADER HERE -->
-            <div id="headerWrapper">
-                <header class="clearfix">
-                    <h1>Boston City</h1>
-                    <h2>Where History Comes Alive</h2>
-                </header>
+      <div id="content-wrap">
+        <!-- HEADER HERE -->
+        
+          <header class="clearfix">
+            <h1>Boston City</h1>
+            <h2>Where History Comes Alive</h2>
+          </header>
+       
+        <!--end headerWrapper-->
+
+        <!-- NAVIGATION HERE -->
+        <nav>
+          <div class="nav-md-lg">
+            <a href="#">Visit</a>
+            <a href="#" class="active">Departments</a>
+            <a href="#">Services</a>
+            <a href="#">Pay Bills</a>
+            <a href="#">Meetings</a>
+            <a href="#">Help</a>
+          </div>
+          <div class="nav-sm">
+            <div>
+              <button id="menu" onclick="showMenu()">&#9776;</button>
+              <button id="x" onclick="hideMenu()">X</button>
+              
             </div>
-            <!--end headerWrapper-->
+            <ul id="dd-menu">
+              <li><a href="#">Visit</a></li>
+              <li><a href="#" class="active">Departments</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Pay Bills</a></li>
+              <li><a href="#">Meetings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- CONTENT HERE -->
+        <main>
+          <div class="mySlider">
+            <picture>
+              <source src="/09/images/boston1.jpg" />
+              <img srcset="/09/images/boston1.jpg" alt="1st slider photo" />
+              <div>
+                <b>Beautiful Boston:</b> This is a photograph of the famous
+                Boston Skyline
+              </div>
+            </picture>
 
-            <!-- NAVIGATION HERE -->
-            <nav>
-                <div class="nav-md-lg">
-                  <a href="#">Visit</a>
-                  <a href="#" class="active">Departments</a>
-                  <a href="#">Services</a>
-                  <a href="#">Pay Bills</a>
-                  <a href="#">Meetings</a>
-                  <a href="#">Help</a>
-                </div>
-                <div class="nav-sm">
-                  <div>
-                    <button id="menu" onclick="showMenu()">&#9776;</button>
-                    <button id="x" onclick="hideMenu()">X</button>
-                    <input type="text" placeholder="Search..." />
-                  </div>
-                  <ul id="dd-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#" class="active">Attorneys</a></li>
-                    <li><a href="#">Practices</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Links</a></li>
-                  </ul>
-                </div>
-              </nav>
-            <!-- CONTENT HERE -->
-            <main>
-                <div class="mySlider">
-                    <picture>
-                        <source src="/09/images/boston1.jpg" />
-                        <img srcset="/09/images/boston1.jpg" alt="1st slider photo" />
-                        <div><b>Beautiful Boston:</b> This is a photograph of the famous Boston Skyline</div>
-                    </picture>
+            <picture>
+              <source src="/09/images/boston2.jpg" />
+              <img srcset="/09/images/boston2.jpg" alt="1st slider photo" />
+              <div>
+                <b>Paul Revere:</b> "The red coats are coming!" Paul's famous
+                words to the colonists
+              </div>
+            </picture>
+            <picture>
+              <source src="/09/images/boston3.jpg" />
+              <img srcset="/09/images/boston3.jpg" alt="1st slider photo" />
+              <div>
+                <b>Spill the Tea:</b> Boston is a giant when it comes to
+                American Reveloution history. Here is a depiction of the
+                imfamous Boston Tea Party
+              </div>
+            </picture>
+            <picture>
+              <source src="/09/images/boston4.jpg" />
+              <img srcset="/09/images/boston4.jpg" alt="1st slider photo" />
+              <div>
+                <b>History Everywhere:</b> Boston is home to more than 7
+                museums, all about 19th centery American History
+              </div>
+            </picture>
+            <picture>
+              <source src="/09/images/boston5.jpg" />
+              <img srcset="/09/images/boston5.jpg" alt="1st slider photo" />
+              <div>
+                <b>We the People:</b> The Preamble was written in Boston in 1787
+              </div>
+            </picture>
+          </div>
+          <!--end slider class-->
+          <span> <h1>Plan your visit</h1></span>
+         
+          <div class="card-grid">
+            <div class="card">
+              <div class="solid-card">
+                <i class="fas fa-bed"></i>
+                <h4><b>PLACES TO STAY</b></h4>
+              </div>
+              <img src="/09/images/hotel.jpg" alt="Hotel" />
+            </div>
+            <!--end card-->
 
-                    <picture>
-                        <source src="/09/images/boston2.jpg" />
-                        <img srcset="/09/images/boston2.jpg" alt="1st slider photo" />
-                        <div><b>Paul Revere:</b> "The red coats are coming!" Paul's famous words to the colonists</div>
-                    </picture>
-                    <picture>
-                        <source src="/09/images/boston3.jpg" />
-                        <img srcset="/09/images/boston3.jpg" alt="1st slider photo" />
-                        <div><b>Spill the Tea:</b> Boston is a giant when it comes to American Reveloution history. Here is a depiction of the imfamous Boston Tea Party</div>
-                    </picture>
-                    <picture>
-                        <source src="/09/images/boston4.jpg" />
-                        <img srcset="/09/images/boston4.jpg" alt="1st slider photo" />
-                        <div><b>History Everywhere:</b> Boston is home to more than 7 museums, all about 19th centery American History</div>
-                    </picture>
-                    <picture>
-                        <source src="/09/images/boston5.jpg" />
-                        <img srcset="/09/images/boston5.jpg" alt="1st slider photo" />
-                        <div><b>We the People:</b> The Preamble was written in Boston in 1787</div>
-                    </picture>
-                </div>
-                <!--end slider class-->
-                <h1>Plan your visit</h1>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-container">
-                            <!-- <img src="/09/images/tipton.jpg" alt="tipton hotel"> -->
-                            <i class="fas fa-bed"></i>
-                            <h4><b>PLACES TO STAY</b></h4>
-                        </div>
-                    </div>
-                    <!--end card-->
-                    <div class="card">
-                        <div class="card-container">
-                            <!-- <img src="/09/images/tipton.jpg" alt="tipton hotel"> -->
-                            <i class="fas fa-search-dollar"></i>
-                            <h4><b>BEST DEALS</b></h4>
-                        </div>
-                    </div>
-                    <!--end card-->
-                    <div class="card">
-                        <div class="card-container">
-                            <!-- <img src="/09/images/tipton.jpg" alt="tipton hotel"> -->
-                            <i class="fas fa-city"></i>
-                            <h4><b>PASS TO THE CITY</b></h4>
-                        </div>
-                    </div>
-                    <!--end card-->
-                    <div class="card">
-                        <div class="card-container">
-                            <!-- <img src="/09/images/tipton.jpg" alt="tipton hotel"> -->
-                            <i class="fas fa-utensils"></i>
-                            <h4><b>FINE DINING</b></h4>
-                        </div>
-                    </div>
-                    <!--end card-->
-                </div><!--end grid-->
-            </main>
-        </div>
-        <!--end content wrap-->
-        <!-- FOOTER HERE -->
-        <div id="footerWrapper">
-            <footer class="clearfix">
-                &copy; 201x &bull; Quinn Nilsson &bull; UVU DGM2740
-            </footer>
-        </div>
-        <!--end footerWrapper-->
+            <div class="card">
+              <div class="solid-card">
+                <i class="fas fa-search-dollar"></i>
+                <h4><b>BEST DEALS</b></h4>
+              </div>
+              <!--end solid card-->
+              <img src="/09/images/smile.jpeg" alt="tipton hotel" />
+            </div>
+            <!--end card-->
+
+            <div class="card">
+              <div class="solid-card">
+                <i class="fas fa-city"></i>
+                <h4><b>PASS TO THE CITY</b></h4>
+              </div>
+              <!--end of solid card-->
+              <img src="/09/images/bus.jpg" alt="tipton hotel" />
+            </div>
+            <!--end card-->
+
+            <div class="card">
+              <div class="solid-card">
+                <i class="fas fa-utensils"></i>
+                <h4><b>FINE DINING</b></h4>
+              </div><!--end solid card-->
+              <img src="/09/images/food.jpg" alt="tipton hotel" />
+            </div>
+            <!--end card-->
+          </div>
+          <!--end card grid-->
+
+        </main>
+      </div>
+      <!--end content wrap-->
+      <!-- FOOTER HERE -->
+      <div id="footerWrapper">
+        <footer class="clearfix">
+          &copy; 201x &bull; Quinn Nilsson &bull; UVU DGM2740
+        </footer>
+      </div>
+      <!--end footerWrapper-->
     </div>
     <!--end container-->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".mySlider").slick({
-                autoplay: true,
-                dots: true,
-                arrows: false,
-                cssEase: "ease-out",
-                speed: 2050,
-                fade: true,
-                autoplaySpeed: 9000
-            });
+      $(document).ready(function() {
+        $(".mySlider").slick({
+          autoplay: true,
+          dots: true,
+          arrows: false,
+          cssEase: "ease-out",
+          speed: 2050,
+          fade: true,
+          autoplaySpeed: 5000
         });
+      });
     </script>
-     <script>
-        const hamburger = document.getElementById("menu");
-        const x = document.getElementById("x");
-        const ddMenu = document.getElementById("dd-menu");
-  
-        function showMenu() {
-          menu.style.display = "none";
-          x.style.display = "initial";
-          ddMenu.style.display = "flex";
-        }
-  
-        function hideMenu() {
-          menu.style.display = "initial";
-          x.style.display = "none";
-          ddMenu.style.display = "none";
-        }
-      </script>
-</body>
+    <script>
+      const hamburger = document.getElementById("menu");
+      const x = document.getElementById("x");
+      const ddMenu = document.getElementById("dd-menu");
 
+      function showMenu() {
+        menu.style.display = "none";
+        x.style.display = "initial";
+        ddMenu.style.display = "flex";
+      }
+
+      function hideMenu() {
+        menu.style.display = "initial";
+        x.style.display = "none";
+        ddMenu.style.display = "none";
+      }
+    </script>
+  </body>
 </html>

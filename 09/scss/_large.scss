@@ -12,14 +12,10 @@ nav {
 main{
     max-width: $widest;
 }
-.grid{
-    display:grid;
-    grid-column-gap: 10px;
-    grid-template-columns:25% 25% 25% auto;
+.card-grid{
+    width:100%;
+   grid-template-columns: repeat(4, 1fr);
 }
 
-.card{
-    text-align: center;
-    background-color:orange;
-}
+
 
