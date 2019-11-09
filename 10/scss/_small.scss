@@ -269,10 +269,17 @@ button:hover {
 button:focus {
   outline: none;
 }
-figcaption{
-  font-size:30pt;
-  text-align: center;
+figure{
+  img{
+    width:100%;
+    object-fit: contain;
+  }
+  figcaption{
+    font-size:20pt;
+    text-align: center;
+  }
 }
+
 //end main
 
 

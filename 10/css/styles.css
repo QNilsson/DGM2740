@@ -498,8 +498,11 @@ button:hover {
 button:focus {
   outline: none; }
 
-figcaption {
-  font-size: 30pt;
+figure img {
+  width: 100%;
+  object-fit: contain; }
+figure figcaption {
+  font-size: 20pt;
   text-align: center; }
 
 /*----------- FOOTER --------------*/
@@ -593,8 +596,10 @@ footer {
         background: #9e3a45; }
 
   /*----------- MAIN --------------*/
-  .form-section {
-    padding-bottom: 25px;
+  form {
+    width: 50%; }
+
+  button {
     width: 50%; }
 
   /*----------- FOOTER --------------*/
@@ -613,9 +618,11 @@ footer {
     width: 64rem; }
 
   /*----------- MAIN --------------*/
-  form .form-section {
-    padding-bottom: 25px;
-    max-width: 25%; }
+  form {
+    width: 25%; }
+
+  button {
+    width: 25%; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */
