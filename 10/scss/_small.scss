@@ -202,10 +202,10 @@ main {
         padding-top: 5px;
         padding-bottom: 5px;
 
-        input:required{
+        input:required:required{
           border:1px solid blue;
         }
-        input:required:invalid{
+        input:invalid{
           border:1px solid salmon;
         }
 
