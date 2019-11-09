@@ -1,28 +1,29 @@
-
 nav {
-    max-width: 56.25rem;
-    margin: 0 auto;
-    
+  max-width: $widest;
+  margin: 0 auto;
+
 }
 
 /*----------- BODY --------------*/
-.form-section {
-  padding-bottom: 25px;
-  width:25%;
-}
+
 
 
 /*----------- HEADER --------------*/
 
 
 /*  ----------------------- NAVIGATION --------------------------- */
-nav{
-  width:$widest;
+nav {
+  width: $widest;
 }
 
 
 /*----------- MAIN --------------*/
+form {
+  .form-section {
+    padding-bottom: 25px;
+    max-width: 25%;
 
+  }
+}
 
 /*----------- FOOTER --------------*/
-    

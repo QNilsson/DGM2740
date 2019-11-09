@@ -374,17 +374,14 @@ nav {
       background: none;
       font-size: 16pt;
       font-weight: bold;
-      color: white;
-      margin-left: 10px; }
+      color: white; }
     .nav-sm div #x {
       display: none;
       border: none;
       background: none;
-      font-size: 16pt;
       font-weight: bold;
       font-family: "Montserrat", sans-serif;
       color: white;
-      margin-left: 10px;
       transition: ease-in-out 0.2s; }
   .nav-sm #dd-menu {
     width: 100%;
@@ -461,6 +458,10 @@ main {
       main .form-section fieldset form {
         padding-top: 5px;
         padding-bottom: 5px; }
+        main .form-section fieldset form input:required {
+          border: 1px solid blue; }
+        main .form-section fieldset form input:required:invalid {
+          border: 1px solid salmon; }
         main .form-section fieldset form label {
           margin-bottom: 20px; }
         main .form-section fieldset form input[type=text],
@@ -493,6 +494,9 @@ button {
 
 button:hover {
   transform: scale(0.9); }
+
+button:focus {
+  outline: none; }
 
 /*----------- FOOTER --------------*/
 footer {
@@ -595,19 +599,19 @@ footer {
 /* end of media query */
 @media only screen and (min-width: 64rem) {
   nav {
-    max-width: 56.25rem;
+    max-width: 64rem;
     margin: 0 auto; }
 
   /*----------- BODY --------------*/
-  .form-section {
-    padding-bottom: 25px;
-    width: 25%; }
-
   /*----------- HEADER --------------*/
   /*  ----------------------- NAVIGATION --------------------------- */
   nav {
     width: 64rem; }
 
   /*----------- MAIN --------------*/
+  form .form-section {
+    padding-bottom: 25px;
+    max-width: 25%; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */

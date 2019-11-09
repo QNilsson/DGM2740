@@ -28,43 +28,43 @@
 <!-- NAVIGATION HERE -->
 <nav>
   <div class="nav-md-lg">
-      <a href="#">Home</a>
-      <a href="#" onmousemove="subNavMenu()" onmouseout="subNavMenuOff()">Products &#9660;</a>
-      <a href="#">Deals</a>
-      <a href="#" class="active">Order</a>
-      <a href="#">Reviews</a>
-      <a href="#">Contact</a>
+    <a href="#">Home</a>
+    <a href="#" onmousemove="subNavMenu()" onmouseout="subNavMenuOff()">Products &#9660;</a>
+    <a href="#">Deals</a>
+    <a href="#" class="active">Order</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
   </div>
   <div id="sub-nav">
-      <div></div>
-      <div id="sub-menu" onmousemove="subNavMenu()" onmouseout="subNavMenuOff()">
-          <a href="#">&nbsp; Shirts</a>
-          <a href="#">&nbsp; Jackets</a>
-          <a href="#">&nbsp; Hats</a>
-      </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div></div>
+    <div id="sub-menu" onmousemove="subNavMenu()" onmouseout="subNavMenuOff()">
+      <a href="#">&nbsp; Shirts</a>
+      <a href="#">&nbsp; Jackets</a>
+      <a href="#">&nbsp; Hats</a>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
   <div class="nav-sm">
-      <div>
-          <button id="menu" onclick="showMenu()">Open &#9776;</button>
-          <button id="x" onclick="hideMenu()">Close X</button>
-      </div>
-      <ul id="dd-menu">
-          <li class="dd-item"><a href="#">Home</a></li>
-          <li class="dd-item"><a href="#" onclick="subMenu()">Products &#9660;</a></li>
-          <li id="dd-sub-menu">
-              <a href="#">&bull; Shirts</a>
-              <a href="#">&bull; Jackets</a>
-              <a href="#">&bull; Hats</a>
-          </li>
-          <li class="dd-item"><a href="#">Deals</a></li>
-          <li class="dd-item"><a href="#" id="active">Order</a></li>
-          <li class="dd-item"><a href="#">Customer Reviews</a></li>
-          <li class="dd-item"><a href="#">Contact</a></li>
-      </ul>
+    <div>
+      <button id="menu" onclick="showMenu()">Open &#9776;</button>
+      <button id="x" onclick="hideMenu()">Close X</button>
+    </div>
+    <ul id="dd-menu">
+      <li class="dd-item"><a href="#">Home</a></li>
+      <li class="dd-item"><a href="#" onclick="subMenu()">Products &#9660;</a></li>
+      <li id="dd-sub-menu">
+        <a href="#">&bull; Tees</a>
+        <a href="#">&bull; Shoesies</a>
+        <a href="#">&bull; Lids</a>
+      </li>
+      <li class="dd-item"><a href="#">Deals</a></li>
+      <li class="dd-item"><a href="#" id="active">Order</a></li>
+      <li class="dd-item"><a href="#">Customer Reviews</a></li>
+      <li class="dd-item"><a href="#">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -81,10 +81,10 @@
               <legend>Customer Information</legend>
               <form>
                 Full Name<br>
-                <input type="text" name="firstname" required>
+                <input type="text" name="firstname" required="required">
                 <br>
                 Phone<br>
-                <input type="text" name="lastname" required>
+                <input type="text" name="lastname" required="required">
                 <br>
                 Email:<br>
                 <input type="text" name="email">
@@ -143,18 +143,21 @@
               <legend>Payment Information</legend>
               <form>
                 Name on Card<br>
-                <input type="text" name="firstname" required>
+                <input type="text" name="firstname" required="required">
                 <br>
                 Card Number<br>
-                <input type="number" name="lastname" required>
+                <input type="number" name="lastname" required="required">
                 <br>
                 Expiration Date:<br>
-                <input type="date" name="email" required>
+                <input type="date" name="email" required="required">
               </form>
             </fieldset>
           </div>
 
-          <button>Order My Swag</button>
+          <a class="btn" href="/10/thanks.html">
+          <button class="btn" type="submit">Order My Swag</button></a>
+          
+          
         </main>
       </div>
       <!--end main wrapper-->
@@ -176,28 +179,33 @@
   const ddMenu = document.getElementById('dd-menu');
   const ddSubMenu = document.getElementById('dd-sub-menu');
   const subNav = document.getElementById('sub-nav');
+
   function showMenu() {
-      menu.style.display = "none";
-      x.style.display = "initial";
-      ddMenu.style.display = "flex";
+    menu.style.display = "none";
+    x.style.display = "initial";
+    ddMenu.style.display = "flex";
   }
+
   function hideMenu() {
-      menu.style.display = "initial";
-      x.style.display = "none";
-      ddMenu.style.display = "none";
-      ddSubMenu.style.display = 'none';
+    menu.style.display = "initial";
+    x.style.display = "none";
+    ddMenu.style.display = "none";
+    ddSubMenu.style.display = 'none';
   }
+
   function subMenu() {
-      ddSubMenu.style.display = ddSubMenu.style.display === 'none' ?
-      'flex'
-      :
+    ddSubMenu.style.display = ddSubMenu.style.display === 'none' ?
+      'flex' :
       'none';
   }
+
   function subNavMenu() {
-      subNav.style.display = 'flex';
+    subNav.style.display = 'flex';
   }
+
   function subNavMenuOff() {
-      subNav.style.display = 'none';
+    subNav.style.display = 'none';
   }
 </script>
+
 </html>
