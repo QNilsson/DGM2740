@@ -47,7 +47,12 @@ header h1 {
   padding-left: 3%;
   color: $third;
 }
-
+header img{
+  float:left;
+  width:70px;
+  height:100%;
+  margin: 0 5px 0 5px;
+}
 /*----------- NAVIGATION --------------*/
 nav {
   width: 100%;
