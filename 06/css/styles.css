@@ -393,8 +393,12 @@ main {
   float: left; }
 
 div.newspaper {
-  column-count: 2;
-  column-gap: 2rem; }
+  display: flex;
+  flex-wrap: wrap; }
+  div.newspaper .memberName {
+    padding: 10px;
+    flex: 1 0 25%;
+    box-sizing: border-box; }
 
 article {
   margin: 0; }

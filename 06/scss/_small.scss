@@ -107,8 +107,14 @@ main {
   float: left;
 }
 div.newspaper {
-  column-count: 2;
-  column-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+  .memberName {
+    padding:10px;
+    flex: 1 0 25%;
+    box-sizing: border-box;
+  }
 }
 
 article {
@@ -124,7 +130,6 @@ article.gallery figure img {
   width: 100%;
   padding-bottom: 3rem;
   position: absolute;
-  
 }
 /*----------- FOOTER --------------*/
 footer {
