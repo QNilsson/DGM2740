@@ -1,0 +1,45 @@
+/*----------------------MAIN-------------------------------*/
+#pagewrapper{
+    width: 100vw;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+     grid-template-columns: .5fr 3fr;
+    grid-template-areas:
+        "header header"
+        "nav content"
+        "footer footer";
+
+
+    color: white;
+}
+.content{
+  
+    img{
+        width:50%;
+        height: auto;
+        padding:10px;
+       
+    }//end img
+    .type{
+        float:left;
+        
+    }
+    .dog{
+        float: right;
+        
+    }
+}//end content
+
+.hamburger, .x{
+    display:none;
+}
+nav{
+    ul{
+        margin-top:-10px;
+        height: 100%;
+    }
+}
+.hamburger{
+    display:none;
+}

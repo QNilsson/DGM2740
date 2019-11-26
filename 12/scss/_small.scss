@@ -1,0 +1,114 @@
+/*----------DEFAULT STUFF---------------*/
+body,
+html {
+    background-color: $primary;
+}
+
+
+/*------------MAIN-------------*/
+#pagewrapper {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "hamburger"
+        "header"
+        "content"
+        "x"
+        "nav"
+        "footer";
+
+    color: white;
+
+}
+
+//end page wrapper
+
+header {
+    grid-column: header;
+    background-color: $secondary;
+    font-family: $head;
+    font-size: 30pt;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+}
+
+nav{
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        background-color:$third;
+        font-family: $body;
+        margin-bottom:-20px;
+    }
+
+    li a{
+        display: block;
+        color:white;
+        padding:8px 16px;
+        text-decoration: none;
+    }
+
+    li:hover{
+        cursor: pointer;
+        background-color:darken($third, 15%);
+    }
+}
+
+.hamburger {
+    grid-area: hamburger;
+    color: $third;
+    font-size: 25pt;
+    cursor: pointer;
+
+}
+
+.x{
+    margin-bottom:-10px;
+    font-size:20pt;
+    background-color:darken($primary, 10%);
+    cursor: pointer;
+}
+
+.content {
+    grid-area: content;
+    font-family: $body;
+    
+
+    p{
+        display: block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .par{
+        padding: 10px 0 10px 0;
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: $secondary;
+    text-align: center;
+    font-family: $body;
+    height:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

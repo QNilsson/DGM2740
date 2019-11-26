@@ -1,0 +1,50 @@
+/*--------------MAIN-----------------*/
+#pagewrapper{
+    
+    width: 100vw;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+     grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "content content content content"
+        "footer footer footer footer";
+
+
+    color: white;
+}
+nav{
+   
+       ul{
+           display: flex;
+           width:100vw;
+           list-style-type: none;
+           margin:0;
+           padding:0;
+           overflow: hidden;
+       }
+       
+       li a{
+           display: block;
+           text-align: center;
+           padding:14px 16px;
+           text-decoration: none;
+       }
+       li a:hover{
+           cursor: pointer;
+       }
+   }
+
+
+.content{
+    padding:0 50px 0 50px;
+    img{
+        width:25%;
+        height: auto;
+    }
+}
+.hamburger, .x{
+    display:none;
+}
