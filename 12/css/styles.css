@@ -323,7 +323,7 @@ header {
   background-color: #c9af98;
   font-family: "Advent Pro", sans-serif;
   font-size: 30pt;
-  height: 100px;
+  height: 120px;
   display: flex;
   align-items: center; }
 
@@ -342,6 +342,8 @@ nav li a {
 nav li:hover {
   cursor: pointer;
   background-color: #e5571e; }
+nav li a.active {
+  background-color: #d24d18; }
 
 .hamburger {
   grid-area: hamburger;
@@ -422,20 +424,22 @@ footer {
     grid-template-areas: "header header header header" "nav nav nav nav" "content content content content" "footer footer footer footer";
     color: white; }
 
-  nav ul {
-    display: flex;
-    width: 100vw;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; }
-  nav li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none; }
-  nav li a:hover {
-    cursor: pointer; }
+  nav {
+    margin-top: -10px; }
+    nav ul {
+      display: flex;
+      width: 100vw;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; }
+    nav li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+    nav li a:hover {
+      cursor: pointer; }
 
   .content {
     padding: 0 50px 0 50px; }

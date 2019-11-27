@@ -31,9 +31,11 @@ header {
     background-color: $secondary;
     font-family: $head;
     font-size: 30pt;
-    height: 100px;
+    height: 120px;
     display: flex;
     align-items: center;
+
+   
 
 }
 
@@ -57,6 +59,10 @@ nav{
     li:hover{
         cursor: pointer;
         background-color:darken($third, 15%);
+    }
+
+    li a.active{
+        background-color:darken($third, 20%);
     }
 }
 
