@@ -1,52 +1,71 @@
-/*--------------MAIN-----------------*/
-#pagewrapper{
-    
-    width: 100vw;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: auto;
-     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-areas:
-        "header header header header"
-        "nav nav nav nav"
-        "content content content content"
-        "footer footer footer footer";
-
-
-    color: white;
-}
-nav{    
-        margin-top:-10px;
-   
-       ul{
-           
-           display: flex;
-           width:100vw;
-           list-style-type: none;
-           margin:0;
-           padding:0;
-           overflow: hidden;
-       }
-       
-       li a{
-           display: block;
-           text-align: center;
-           padding:14px 16px;
-           text-decoration: none;
-       }
-       li a:hover{
-           cursor: pointer;
-       }
-   }
-
-
-.content{
-    padding:0 50px 0 50px;
-    img{
-        width:25%;
-        height: auto;
+header {
+    div {
+        width: 75rem;
     }
 }
-.hamburger, .x{
-    display:none;
+
+.nav-lg {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    background: $prime;
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            width: 10%;
+            height: 100%;
+            color: $third;
+            font-family: $font;
+            border-left: solid 1px $third;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: ease-in-out 0.2s;
+            &:hover {
+                background: darken($prime, 10%);
+            }
+        }
+        #headsets {
+            border-right: solid 1px $third;
+        }
+    }
+}
+
+.nav-md {
+    display: none;
+}
+
+.main-content {
+    width: 75rem;
+    grid-template-areas:
+        "h1 h1 h1"
+        "ipad-h3 ipad-h3 ipad-h3"
+        "ipad-p ipad-p ipad-img"
+        "sony-img sony sony"
+        "sony-img sony sony"
+        "surface-h3 surface-h3 surface-h3"
+        "surface-p surface-p surface-img"
+    ;
+}
+
+.sony {
+    display: flex;
+    flex-direction: column;
+    grid-area: sony;
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+
+.sony-h3 {
+    display: none;
+}
+.sony-p {
+    display: none;
 }

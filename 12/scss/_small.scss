@@ -1,120 +1,221 @@
-/*----------DEFAULT STUFF---------------*/
-body,
+/* Prevent adjustments of font size when orientation changes  */
 html {
-    background-color: $primary;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* apply a natural box layout model to all elements */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-/*------------MAIN-------------*/
-#pagewrapper {
-    width: 100%;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "hamburger"
-        "header"
-        "content"
-        "x"
-        "nav"
-        "footer";
-
-    color: white;
-
+html, body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-//end page wrapper
+.nav-sm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  div {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: $prime;
+      #menu {
+          border: none;
+          background: none;
+          font-size: 16pt;
+          font-weight: bold;
+          color: white;
+          margin-left: 10px;
+          text-decoration: none;
+          cursor: pointer;
+      }
+  }
+}
+#active {
+  background: darken($prime, 10%);
+}
+.nav-lg {
+  display: none;
+}
+.nav-md {
+  display: none;
+}
 
 header {
-    grid-column: header;
-    background-color: $secondary;
-    font-family: $head;
-    font-size: 30pt;
-    height: 120px;
-    display: flex;
-    align-items: center;
-
-   
-
+  width: 100%;
+  height: 100px;
+  display: flex;
+  font-family: $font;
+  align-items: center;
+  justify-content: center;
+  background: lighten($second, 30%);
+  div {
+      width: 95%;
+      img {
+          width: 300px;
+          height: 100%;
+      }
+  }
 }
 
-nav{
-    ul{
-        list-style-type: none;
-        margin:0;
-        padding:0;
-        background-color:$third;
-        font-family: $body;
-        margin-bottom:-20px;
-    }
-
-    li a{
-        display: block;
-        color:white;
-        padding:8px 16px;
-        text-decoration: none;
-    }
-
-    li:hover{
-        cursor: pointer;
-        background-color:darken($third, 15%);
-    }
-
-    li a.active{
-        background-color:darken($third, 20%);
-    }
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
-.hamburger {
-    grid-area: hamburger;
-    color: $third;
-    font-size: 25pt;
-    cursor: pointer;
-
+.main-content {
+  width: 95%;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+      "h1"
+      "ipad-h3"
+      "ipad-img"
+      "ipad-p"
+      "sony-h3"
+      "sony-img"
+      "sony-p"
+      "surface-h3"
+      "surface-img"
+      "surface-p"
+  ;
+  img {
+      width: 100%;
+      height: auto;
+  }
+  h1, h3, p {
+      font-family: $font;
+  }
+}
+.h1 {
+  grid-area: h1;
+}
+.ipad-h3 {
+  grid-area: ipad-h3;
+}
+.ipad-img {
+  grid-area: ipad-img;
+}
+.ipad-p {
+  grid-area: ipad-p;
+}
+.sony-h3 {
+  grid-area: sony-h3;
+}
+.sony-img {
+  grid-area: sony-img;
+}
+.sony-p {
+  grid-area: sony-p;
+}
+.surface-h3 {
+  grid-area: surface-h3;
+}
+.surface-img {
+  grid-area: surface-img;
+}
+.surface-p {
+  grid-area: surface-p;
+}
+.sony {
+  display: none;
 }
 
-.x{
-    margin-bottom:-10px;
-    font-size:20pt;
-    background-color:darken($primary, 10%);
-    cursor: pointer;
-}
-
-.content {
-    grid-area: content;
-    font-family: $body;
-    
-
-    p{
-        display: block;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        
-    }
-
-    .par{
-        padding: 10px 0 10px 0;
-    }
-}
 
 footer {
-    grid-area: footer;
-    background-color: $secondary;
-    text-align: center;
-    font-family: $body;
-    height:40px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-   
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $prime;
+  p {
+      font-family: $font;
+      color: white;
+  }
 }
 
+#nav-bottom {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: $prime;
+  div {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: $prime;
+      #x {
+          border: none;
+          background: none;
+          font-size: 16pt;
+          font-weight: bold;
+          color: white;
+          margin-left: 10px;
+          
+        
+      }
+  }
+  ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: solid 1px $third;
+      transition: ease-in-out 0.2s;
+      background: $prime;
+      li {
+          width: 100%;
+          height: 50px;
+          border-bottom: solid 1px $third;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              color: $third;
+              font-family: $font;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+      }
+  }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }

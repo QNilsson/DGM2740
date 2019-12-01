@@ -470,19 +470,14 @@ nav {
     justify-content: center;
     background: #aabaf7;
     border: solid 1px #bbe4f9;
-    cursor: pointer; }
+    cursor: pointer;
+    font-family: "Bangers", cursive; }
     nav button img {
       width: 30px;
       height: auto; }
     nav button #locationBtm {
       width: 22px;
       height: auto; }
-    nav button h4 {
-      margin: 0;
-      margin-top: 6px;
-      font-family: "Bangers", cursive;
-      color: #bbe4f9;
-      font-size: 14pt; }
   nav #active {
     background: #6481f0; }
 
