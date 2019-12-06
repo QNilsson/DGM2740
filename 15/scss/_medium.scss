@@ -1,0 +1,97 @@
+/*-------------------HEADER----------------*/
+
+
+
+/*--------------------NAV------------------------*/
+
+/*------------------------MAIN----------------------*/
+.black {
+    background-color: black;
+    padding: 5px 30px 30px 20px;
+    
+    // align-content: center;
+    // align-items: center;
+    
+  .black-content{
+    display:grid;
+    grid-template-columns: 75% auto;
+    align-items: center;
+    align-content: center;
+    max-width: 65rem;
+    margin: auto;
+
+  }
+
+    
+    .item-a {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .item-b {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+
+        text-align: right;
+    }
+
+    .bullet {
+        color: white;
+        list-style-type: disc;
+        margin-left: 70px;
+        font-family: $body;
+    }
+
+
+    h2 {
+        color: #ffd500;
+    }
+
+    p {
+        color: white;
+        font-family: $body;
+    }
+
+
+}
+.topgrid {
+    display: grid;
+    margin:auto;
+    max-width: 65rem;
+
+    .cards {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        min-width: 0;
+        width: auto;
+
+        .card {
+            font-family: $body;
+
+            h3 {
+                color: $prime;
+            }
+
+        }
+
+        //end card
+        #persistance {
+            padding-right: 13px;
+        }
+
+        #people {
+            margin-right: 13px;
+        }
+
+        #process {
+            margin-right: 13px;
+        }
+
+    #payoff{
+        margin-right:13px;
+    }
+    }
+
+}
+/*------------------------FOOTER--------------------*/

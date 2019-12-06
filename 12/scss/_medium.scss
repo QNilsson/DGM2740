@@ -1,3 +1,4 @@
+@import './variables';
 .nav-sm {
   display: none;
 }
@@ -11,7 +12,10 @@ main {
       justify-content: center;
   }
 }
-
+header{
+  background-color:$prime;
+  border: 1px solid $third;
+}
 .nav-md {
   display: flex;
   width: 20%;

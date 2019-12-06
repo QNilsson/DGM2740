@@ -1,0 +1,267 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#page-container {
+    position: relative;
+    min-width: 100vh;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+body {
+    font-size: 16px;
+    font-family: $head;
+    margin: auto;
+    align-items: center;
+    margin:15px;
+    
+    
+}
+
+/*-------------------HEADER----------------*/
+header {
+    align-items: center;
+    max-width: 65rem;
+    margin: auto;
+
+    .hero {
+        display:flex;
+       max-width: 100vw;
+        height: auto;
+        img {
+            width: 100%;
+            flex-basis: 20%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+
+/*--------------------NAV------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+
+    li {
+        float: left;
+        font-family: $body;
+        padding: 0 24px 0;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: $prime;
+        display: flex;
+
+        a {
+            display: block;
+            color: $prime;
+            text-align: center;
+
+            text-decoration: none;
+
+
+            a:visited {
+                text-emphasis: none;
+                color: $third;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: darken($third, 30%);
+            }
+
+            a:focus {
+                text-decoration: none;
+            }
+
+            a:active {
+                text-decoration: none;
+                color: $second;
+            }
+
+        }
+    }
+}
+
+/*------------------------MAIN----------------------*/
+.black {
+    background-color: black;
+    padding: 5px 30px 30px 20px;
+    max-width:100vw;
+    
+    // align-content: center;
+    // align-items: center;
+    
+  .black-content{
+    display:flex;
+    flex-wrap: wrap;
+   max-width: 100vw;
+    justify-content: space-around;
+    
+
+  }
+    
+
+    // .item-a {
+    //     grid-column: 1 / span 4;
+    //     grid-row: 1;
+       
+    // }
+
+    .item-b {
+       
+        
+        float: right;
+    }
+
+    .bullet {
+        color: white;
+        list-style-type: disc;
+        
+        font-family: $body;
+    }
+
+
+    h2 {
+        color: #ffd500;
+    }
+
+    p {
+        color: white;
+        font-family: $body;
+    }
+
+
+}
+.moreabout{
+    margin:auto;
+    max-width: 65rem;
+    h1{
+        margin-bottom:-10px;
+    }
+}
+//end black
+.topgrid {
+    display: grid;
+    margin:auto;
+    object-fit: contain;
+    p{
+        font-family: $body;
+    }
+    .card {
+        max-width:100vw;
+        img{
+        max-width: 100vw;
+        height:auto;
+    }
+}
+
+    // .cards {
+    //     display: grid;
+    //     grid-template-columns: 100%;
+    //     width: 100%;
+    //     object-fit: contain;
+
+    //     .card {
+    //         font-family: $body;
+    //         object-fit: contain;
+    //         h3 {
+    //             color: $prime;
+    //         }
+
+    //     }
+
+       
+    // }
+
+}//end top grid
+.btm{
+    background-image:linear-gradient(top to right, red, yellow);
+    margin:auto;
+    max-width: 65rem;
+    
+
+.bottom-content {
+    margin-top:20px;
+    display: grid;
+    font-family: $body;
+    align-self: stretch;
+    grid-template-columns: 100%;
+    max-width: 100vw;
+    grid-template-rows: auto;
+    padding-bottom:15px;
+   
+    // .infra {
+    //     grid-area: 1 / span 1;
+    //     margin-right:13px;
+    // }
+
+    // .tech {
+    //     grid-area: 1 / span 2;
+    //     margin-right:13px;
+        
+    // }
+
+    .graph {
+        
+        img{
+            width:100%;
+            height: auto;
+            object-fit: contain;
+            overflow: hidden;
+            
+        }
+    }
+
+    // .live {
+    //     grid-area: 2 / 1 / 2 / 3;
+    // }
+
+    h3 {
+        color: $prime;
+    }
+}//end bottom content
+    
+}
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    
+    flex-basis: 100%;
+    justify-content: start;
+    img{
+        max-width: 100vw;
+    }
+    
+}
+
+/*------------------------FOOTER--------------------*/
+footer {
+    background-image: linear-gradient(to bottom, $third , $second);
+    padding: 0.5rem 2%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+  
+    font-family: $body;
+}

@@ -334,15 +334,16 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: #3a4660; }
+    background: #3a4660;
+    cursor: pointer; }
     .nav-sm div #menu {
       border: none;
-      background: none;
-      font-size: 16pt;
+      font-size: 22pt;
       font-weight: bold;
-      color: white;
-      margin-left: 10px;
-      text-decoration: none; }
+      color: #ed8a63;
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 999; }
 
 #active {
   background: #272f40; }
@@ -400,13 +401,13 @@ main {
 .ipad-p {
   grid-area: ipad-p; }
 
-.sony-h3 {
+.galaxy-h3 {
   grid-area: sony-h3; }
 
-.sony-img {
-  grid-area: sony-img; }
+.galaxy-img {
+  grid-area: galaxy-img; }
 
-.sony-p {
+.galaxy-p {
   grid-area: sony-p; }
 
 .surface-h3 {
@@ -418,7 +419,7 @@ main {
 .surface-p {
   grid-area: surface-p; }
 
-.sony {
+.galaxy {
   display: none; }
 
 footer {
@@ -452,8 +453,7 @@ footer {
       font-size: 16pt;
       font-weight: bold;
       color: white;
-      margin-left: 10px;
-      font-family: "Bebas Neue", cursive; }
+      margin-left: 10px; }
   #nav-bottom ul {
     width: 100%;
     display: flex;
@@ -482,6 +482,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center; }
+        #nav-bottom ul li a a:hover {
+          background-color: #000001; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -499,6 +501,10 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center; }
+
+  header {
+    background-color: #3a4660;
+    border: 1px solid #ed8a63; }
 
   .nav-md {
     display: flex;
